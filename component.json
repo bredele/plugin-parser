@@ -1,0 +1,14 @@
+{
+  "name": "plugin-parser",
+  "repo": "bredele/plugin-parser",
+  "description": "Plugin parser for binding component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
