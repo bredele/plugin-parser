@@ -4,7 +4,10 @@
   "description": "Plugin parser for binding component",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "bredele/trim" : "*",
+    "bredele/mapify" : "*"
+  },
   "development": {
     "component/assert" : "*"
   },

@@ -9,14 +9,22 @@ describe("parse(str)", function() {
 
   it('should support args', function(){
     var result = parse('method:arg');
+    assert(result.method === 'method');
+    assert(result.params[0] === 'arg');
   });
 
   it('should support multiple args', function(){
     var result = parse('method:arg1,arg2');
+    assert(result.method === 'method');
+    assert(result.params[0] === 'arg1');
+    assert(result.params[1] === 'arg2');
   });
 
   it('should support white spaces', function(){
     var result = parse(' method : arg1, arg2');
+    assert(result.method === 'method');
+    assert(result.params[0] === 'arg1');
+    assert(result.params[1] === 'arg2');
   });
 
   it('should support multiple methods', function(){
