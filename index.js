@@ -13,6 +13,6 @@ module.exports = function(str) {
   }
   return {
     method: trim(expr[0]),
-    params: params
+    params: params || []
   };
 };
