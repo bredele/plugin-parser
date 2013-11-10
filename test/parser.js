@@ -3,7 +3,8 @@ var assert = require('assert');
 
 describe("parse(str)", function() {
   it('should support "method"', function(){
-    var result = parse('method');
+    var result = parse('method'); 
+    assert(result.method === 'method');
   });
 
   it('should support args', function(){
