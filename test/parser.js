@@ -50,6 +50,13 @@ describe("parse(str)", function() {
 
   it('should support multiple methods', function(){
     var result = parse('method:arg1; method2');
+    assert(equal(result, [{
+      method: 'method',
+      params: ['arg1']
+    }, {
+      method: 'method2',
+      params : []
+    }]));
   });
 
 });
