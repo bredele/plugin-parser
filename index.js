@@ -11,8 +11,8 @@ module.exports = function(str) {
   if(expr[1]){
     var params = map(trim)(expr[1].split(','));
   }
-  return {
+  return [{
     method: trim(expr[0]),
     params: params || []
-  };
+  }];
 };
