@@ -5,7 +5,9 @@
  */
 
 module.exports = function(str) {
-  var phrases = str.replace(/ /g,'').split(';');
+	str = str.replace(/ /g,'');
+	var phrases = str ? str.split(';') : ['default'];
+  //var phrases = str.replace(/ /g,'').split(';') || ['default'];
   var results = [];
   for(var i = 0, l = phrases.length; i < l; i++) {
     var expr = phrases[i].split(':');
