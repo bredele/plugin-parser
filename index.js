@@ -1,5 +1,3 @@
-var trim = require('trim');
-var map = require('mapify');
 
 /**
  * Plugin constructor.
@@ -7,13 +5,13 @@ var map = require('mapify');
  */
 
 module.exports = function(str) {
-  var phrases = str.split(',');
+  var phrases = str.replace(/ /g,'').split(',');
   var results = [];
   for(var i = 0, l = phrases.length; i < l; i++){
     var phrase = phrases[i];
     var expr = phrase.split(':');
     if(expr[1]){
-      var params = map(trim)(expr[1].split(','));
+      var params = expr[1].split(',');
     }
     results.push({
       method: trim(expr[0]),
