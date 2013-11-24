@@ -24,7 +24,6 @@ describe("parse(str)", function() {
 
   it('should support multiple args', function(){
     var result = parse('method:arg1,arg2');
-    debugger
     assert(equal(result, [{
       method: 'method',
       params: ['arg1', 'arg2']
@@ -42,6 +41,7 @@ describe("parse(str)", function() {
   //special with default method
   it('should support just args', function(){
     var result = parse('arg1,arg2');
+    console.log(result);
     assert(equal(result, [{
       method: 'default',
       params: ['arg']
@@ -51,6 +51,7 @@ describe("parse(str)", function() {
 
   it('should support multiple methods', function(){
     var result = parse('method:arg1; method2');
+    console.log(result);
     assert(equal(result, [{
       method: 'method',
       params: ['arg1']
