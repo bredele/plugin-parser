@@ -5,8 +5,6 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "bredele/trim" : "*",
-    "bredele/mapify" : "*"
   },
   "development": {
     "component/assert" : "*"
