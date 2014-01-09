@@ -6,8 +6,8 @@
 
 module.exports = function(str) {
 	str = str.replace(/ /g,'');
-	var phrases = str ? str.split(';') : ['default'];
-  //var phrases = str.replace(/ /g,'').split(';') || ['default'];
+	var phrases = str ? str.split(';') : ['main'];
+  //var phrases = str.replace(/ /g,'').split(';') || ['main'];
   var results = [];
   for(var i = 0, l = phrases.length; i < l; i++) {
     var expr = phrases[i].split(':');
@@ -18,7 +18,7 @@ module.exports = function(str) {
     if(expr[1]) {
       params = expr[1].split(',');
     } else {
-      name = 'default';
+      name = 'main';
     }
 
     results.push({

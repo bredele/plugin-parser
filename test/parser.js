@@ -39,11 +39,11 @@ describe("parse(str)", function() {
     }]));
   });
 
-  //special with default method
+  //special with main method
   // it('should support just args', function(){
   //   var result = parse('arg1,arg2');
   //   assert(equal(result, [{
-  //     method: 'default',
+  //     method: 'main',
   //     params: ['arg']
   //   }]));
   // });
@@ -60,10 +60,10 @@ describe("parse(str)", function() {
     }]));
   });
 
-  it('should support empty string and return default method', function(){
+  it('should support empty string and return main method', function(){
     var result = parse('');
     assert(equal(result, [{
-      method: 'default',
+      method: 'main',
       params: []
     }]));
   });
