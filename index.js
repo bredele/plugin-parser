@@ -1,3 +1,4 @@
+var trim = require('trim');
 
 /**
  * Plugin constructor.
@@ -5,9 +6,8 @@
  */
 
 module.exports = function(str) {
-	str = str.replace(/ /g,'');
+	//str = str.replace(/ /g,'');
 	var phrases = str ? str.split(';') : ['main'];
-  //var phrases = str.replace(/ /g,'').split(';') || ['main'];
   var results = [];
   for(var i = 0, l = phrases.length; i < l; i++) {
     var expr = phrases[i].split(':');
@@ -16,13 +16,16 @@ module.exports = function(str) {
     var name = expr[0];
 
     if(expr[1]) {
-      params = expr[1].split(',');
+      var args = expr[1].split(',');
+      for(var j = 0, h = args.length; j < h; j++) {
+        params.push(trim(args[j]));
+      }
     } else {
-      name = 'main';
+      name = 'main'; //doesn't do anything
     }
 
     results.push({
-      method: expr[0],
+      method: trim(expr[0]),
       params: params
     });
   }

@@ -9,6 +9,7 @@ describe("parse(str)", function() {
 
   it('should support "method"', function(){
     var result = parse('method');
+    debugger
     assert(equal(result, [{
       method: "method",
       params: []
@@ -50,6 +51,7 @@ describe("parse(str)", function() {
 
 
   it('should support multiple methods', function(){
+    debugger
     var result = parse('method:arg1; method2');
     assert(equal(result, [{
       method: 'method',
